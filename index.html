@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Discover World on Bicycle, Tandem Cycles on Rent </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/light-box.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link rel="stylesheet" href="css/ccss/style.css">
+        <link rel="stylesheet" href="assets/css/main2.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <style>
+@import url("https://fonts.googleapis.com/css?family=Hind+Madurai:300,600|Poppins:300&display=swap");
+
+:root {
+  --yellow: #ffd049;
+  --light-yellow: #fdf2d2;
+  --orange: #ffa929;
+  --light-gray: #e3e4e8;
+  --gray: #71738b;
+  --light-blue: #7a7c93;
+  --blue: #34385a;
+
+  --slider-handle-size: 14px;
+  --slider-handle-border-radius: 2px;
+  --slider-handle-margin-top: -4px;
+  --slider-track-height: 6px;
+  --slider-track-border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+#wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sliderContainer {
+  width: 100%;
+     
+  padding: 56px 40px;
+
+  border-radius: 40px;
+
+  box-shadow: 0px 8px 40px rgba(128, 128, 128, 0.15);
+}
+
+#sliderContainer > div:first-child {
+  margin-bottom: 48px;
+}
+
+.tick-slider-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.tick-slider-header > h5 {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--gray);
+}
+
+.tick-slider {
+  position: relative;
+
+  width: 100%;
+}
+
+.tick-slider-value-container {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 12px;
+
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 18px;
+  color: var(--gray);
+}
+
+.tick-slider-value {
+  position: absolute;
+  top: 0;
+
+  font-weight: bold;
+
+  color: var(--blue);
+
+  border-radius: var(--slider-handle-border-radius);
+}
+
+.tick-slider-value > div {
+  animation: bulge 0.3s ease-out;
+}
+
+.tick-slider-background,
+.tick-slider-progress,
+.tick-slider-tick-container {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+
+  height: var(--slider-track-height);
+
+  pointer-events: none;
+
+  border-radius: var(--slider-track-border-radius);
+
+  z-index: -1;
+}
+
+.tick-slider-background {
+  width: 100%;
+  background-color: var(--light-gray);
+}
+
+.tick-slider-progress {
+  background-color: var(--yellow);
+}
+
+.tick-slider-tick-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 calc(var(--slider-handle-size) / 2);
+}
+
+.tick-slider-tick {
+  width: 2px;
+  height: 2px;
+
+  border-radius: 50%;
+
+  background-color: white;
+}
+
+.tick-slider-label {
+  opacity: 0.85;
+  transition: opacity 0.1s ease;
+}
+
+.tick-slider-label.hidden {
+  opacity: 0;
+}
+
+@keyframes bulge {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*
+
+    REMOVE SLIDER STYLE DEFAULTS
+
+*/
+input[type="range"] {
+  -webkit-appearance: none;
+
+  width: 100%;
+  height: 100%;
+
+  background: transparent;
+  outline: none;
+
+  margin: 5px 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  border: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+
+/*
+
+    HANDLE
+
+*/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  width: var(--slider-handle-size);
+  height: var(--slider-handle-size);
+
+  background: var(--orange);
+
+  border-radius: var(--slider-handle-border-radius);
+
+  cursor: pointer;
+
+  margin-top: var(--slider-handle-margin-top);
+
+  -webkit-transform: scale(1);
+  transform: scale(1);
+
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+
+  width: var(--slider-handle-size);
+  height: var(--slider-handle-size);
+
+  background: var(--orange);
+
+  border: none;
+  border-radius: var(--slider-handle-border-radius);
+
+  cursor: pointer;
+
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+input[type="range"]:hover::-moz-range-thumb,
+input[type="range"]:focus::-moz-range-thumb {
+  transform: scale(1.2);
+}
+
+/*
+
+    TRACK
+
+*/
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: var(--slider-track-height);
+
+  cursor: pointer;
+
+  background: none;
+
+  border-radius: var(--slider-track-border-radius);
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: var(--slider-track-height);
+
+  cursor: pointer;
+
+  background: none;
+
+  border-radius: var(--slider-track-border-radius);
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: none;
+}
+input[type="range"]:active::-webkit-slider-runnable-track {
+  background: none;
+}
+
+
+
+</style>
+    </head>
+
+
+
+<body>
+ <!--/.navbar-header-->
+           
+<header id="header" style="position: fixed; background-color:#FFFFFF; height:70px;">
+				<div id="logo">	<a href="index.html"><img src="Images/Cycle Rental-3.png" alt="" style="width:auto; height:65px; display:inline-flexbox; margin-left:10px;"></a>
+                    <a href="https://bycs.org/pooja-vijay/"><img src="Images/Jaipur mayor.png" alt="" style="width:auto; height:65px; display:inline-flexbox; margin-left:10px;"></a></div>
+					<nav id="nav">
+						<ul style="color: #ff75a0; margin-top: 10px;">
+							<li><a href="index.html">Home</a></li>
+                            
+                            <li><a href="index.html#services">Our Services</a></li>
+                            <li><a href="index.html#cycling">Why Cycling</a></li>
+                            <li><a href="index.html#projects">Gallery</a></li>
+                            <li><a href="index.html#blog">Blogs</a></li>
+                           	<li><a href="index.html#contact">Contact</a></li>
+							<li><a href="Booking/index.html">Book Now</a></li>
+                            <li><a class="call-section" href="https://wa.me/917229942277"><i class="fa fa-whatsapp"></i></a></li>
+							<li><a class="call-section" href="tel:+7999947837"><i class="fa fa-phone"></i>&nbsp +91-7999947837</a></li>
+						</ul>
+					</nav>
+				</header>
+ <!-- Navbar  -->
+
+<br><br><br>
+        <div class="banner">
+            <div class="Modern-Slider" id="top">
+        <div id="tm-video-container">
+        <video autoplay muted loop id="tm-video" style=" background-color: Black;z-index:10;">
+            <source src="Images/Timeline 1.mov" type="video/mp4">            
+        </video>  
+         <div class="info">
+                        <div>
+                          <h1>Promoting Bicycling, Promoting HealthyLife
+                          
+                          <div class="white-button button">
+                              <a href="Booking/index.html">BOOK NOW</a>
+                          </div>
+                        </div>
+                        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="page-content">
+            
+            <section id="featured" class="content-section">
+                <div class="section-heading" style="margin-bottom:10px">
+                    <h1>OUR<br><em>INITIATIVES</em></h1>
+                    <p>Bike Rent itself is an initiative which is restlessly working to promote bicycle all over, be it individual or a corporate. Our Numerous initiatives are part of our mission of having 50% city rides on bicycles by 2030.</p>
+                </div>
+                <section id="clients" class="clients">
+                    <div class="container">
+              
+                      <div class="row no-gutters clients-wrap clearfix wow fadeInUp" >
+              
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                          <div class="client-logo">
+                            <a><img src="Images/Logo with TM.png" width="auto" height="75px" class="img-fluid" alt=""></a>
+                          </div>
+                        </div>
+              
+                        <div class="col-lg-3 col-md-4 col-xs-6" href="#" data-toggle="modal" data-target="#service-2">
+                          <div class="client-logo">
+                          
+                            <img src="Images/PBS Logo.png" width="auto" height="70px"  class="img-fluid" alt="">
+                          </div>
+                        </div>
+              
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                          <div class="client-logo">
+                           <a> <img src="Images//heritage on pedals logo.png" width="auto" height="70px" class="img-fluid" alt=""></a>
+                          </div>
+                        </div>
+              
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                          <div class="client-logo">
+                           <a><img src="Images/JC LOGO Low.png" width="auto" height="70px"  class="img-fluid" alt=""></a>
+                          </div>
+                        </div>
+
+                        </div>
+                        </div>
+                        </section>
+                     
+                        </section>
+                        <br><br><br><br>
+
+             <!----> 
+             <!-- ======= About us Section ======= -->
+    <section id="faq" class="faq">
+      
+        <div class="container-fluid" style="padding-left: 15.5%;">
+  
+          <div class="row">
+  
+            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+  
+<!-- <div class="content" style="padding-left: 4.5%;">
+             <div class="section-heading">
+                <br>
+                <h1>OUR<br><em>SERVICES</em></h1>
+
+            </div>
+            
+          </div>
+        -->
+
+
+             <div id="wrapper">
+             
+    <div id="sliderContainer"> 
+        <section id="featured" class="content-section">
+            <div class="section-heading" style="margin-bottom:10px">
+                <h1>Rent Your<br><em>Cycle</em></h1>
+                <p>Rent out a bike, earn some extra cash
+                    Let your bike work for you
+                    Just a few clicks and our slider will show you how much you can earn by renting out a bike</p>
+            </div>
+        <div class="tick-slider">
+            <div class="tick-slider-header">
+                <h5><label for="weightSlider">Market Price:</label></h5>
+                <h5>Market Value</h5>
+            </div>
+            <div class="tick-slider-value-container">
+                <div id="weightLabelMin" class="tick-slider-label">$0</div>
+                <div id="weightLabelMax" class="tick-slider-label">$10000</div>
+                <div id="weightValue" class="tick-slider-value"></div>
+            </div>
+            <div class="tick-slider-background"></div>
+            <div id="weightProgress" class="tick-slider-progress"></div>
+            <div id="weightTicks" class="tick-slider-tick-container"></div>
+            <input
+                id="weightSlider"
+                class="tick-slider-input"
+                type="range"
+                min="0"
+                max="10000"
+                step="500"
+                value="20"
+                data-tick-step="500"
+                data-tick-id="weightTicks"
+                data-value-id="weightValue"
+                data-progress-id="weightProgress"
+                data-handle-size="18"
+                data-min-label-id="weightLabelMin"
+                data-max-label-id="weightLabelMax"
+            />
+        </div>
+        <div class="tick-slider">
+            <div class="tick-slider-header">
+                <h5><label for="sizeSlider">Rental Duration</label></h5>
+                <h5>Days</h5>
+            </div>
+            <div class="tick-slider-value-container">
+                <div id="sizeLabelMin" class="tick-slider-label">0</div>
+                <div id="sizeLabelMax" class="tick-slider-label">30 Days</div>
+                <div id="sizeValue" class="tick-slider-value"></div>
+            </div>
+            <div class="tick-slider-background"></div>
+            <div id="sizeProgress" class="tick-slider-progress"></div>
+            <div id="sizeTicks" class="tick-slider-tick-container"></div>
+            <input
+                id="sizeSlider"
+                class="tick-slider-input"
+                type="range"
+                min="0"
+                max="30"
+                step="1"
+                value="30"
+                data-tick-step="10"
+                data-tick-id="sizeTicks"
+                data-value-id="sizeValue"
+                data-progress-id="sizeProgress"
+                data-handle-size="18"
+                data-min-label-id="sizeLabelMin"
+                data-max-label-id="sizeLabelMax"
+            />
+         
+        </div>
+        <div class="white-button button">
+            <a href="register.php">RENT NOW</a>
+        </div>
+    </div>
+
+</div>
+
+
+<br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+              
+           
+            </div>
+            
+          </div>
+  
+        </div>
+  
+      </section><!-- End Faq Section -->
+
+        <!-- ======= Services Section ======= -->
+        <div class="content" style="padding-left: 4.5%;">
+             <div class="section-heading">
+                <br>
+                <h1>OUR<br><em>SERVICES</em></h1>
+
+            </div>
+            
+          </div>
+        <div class="section-title" >
+          
+          </div>
+    <section id="services" class="services"  style="background-image: url('img/harsh-jain-3EwYQ09ZHh8-unsplash.jpg');">
+        <br>
+        <div class="container-service">     
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="padding-bottom: 10px;">
+              <div class="icon-box" href="#" data-toggle="modal" data-target="#service-1">
+               
+                <h4><a >Cycle Rentals</a></h4>
+                <p>Bike Rent provides best in class fully maintained hi-end international brand</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" style="padding-bottom: 10px;">
+              <div class="icon-box" href="#" data-toggle="modal" data-target="#service-2">
+              
+                <h4><a >Public Bicycle Sharing</a></h4>
+                <p>Bike Rent have a hand on experience in Public Bicycle sharing</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" style="padding-bottom: 10px;">
+              <div class="icon-box" href="#" data-toggle="modal" data-target="#service-3">
+              
+                <h4><a >Corporate Mobility Solutions</a></h4>
+                <p>Bike Rent, from the very first day is working towards providing</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" style="padding-bottom: 10px;">
+              <div class="icon-box" href="#" data-toggle="modal" data-target="#service-4">
+                
+                <h4><a >Corporate Cycling Events</a></h4>
+                <p>Bike Rent, one of the major area of working is Cycling events or large scale group</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" style="padding-bottom: 10px;">
+              <div class="icon-box" href="#" data-toggle="modal" data-target="#service-5">
+                
+                <h4><a >Cyclothons</a></h4>
+                <p>Large scale cyclothons are being organised in every short span of time to keep up the spirit </p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" style="padding-bottom: 10px;">
+              <div class="icon-box" href="#" data-toggle="modal" data-target="#service-6">
+               
+                <h4><a >Customised City Cycle Tours</a></h4>
+                <p>Are you looking for something specially designed for you as per your holiday plans, </p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+        <br>
+    
+      </section><!-- End Services Section -->
+
+        <!--Cycling -->
+        <section id="cycling" class="content-section">
+            <div class="section-heading">
+                <br>
+                <h1>WHY<br><em>CYCLING</em></h1>
+
+            </div>
+            <div class="section-content">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/1whycycling.jpg" alt="">
+                            <div class="cycling-button button">
+                                <a href="#" data-toggle="modal" data-target="#modal-1">View More</a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h4>NEED OF CYCLING </h4>
+                            <p>According to WHO, 60% of related factors to individual health and quality of life are
+                                correlated to lifestyle.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/2whyhireacycle.jpg" alt="">
+                            <div class="cycling-button button">
+                                <a href="#" data-toggle="modal" data-target="#modal-2">View More</a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h4>WHY HIRE A CYCLE?</h4>
+
+                            <p>At Bike Rent we want people to experience the joy of cycling and a contribution to make
+                                our environment clean ...</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/3factaboutcycling.jpg" alt="">
+                            <div class="cycling-button button">
+                                <a href="#" data-toggle="modal" data-target="#modal-3">View More</a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h4>FACT ABOUT CYCLING</h4>
+
+                            <p>Cycling is taken as a easiest sports unlike some other sports, cycling does not require
+                                high levels of physical skill.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/4benefitsofcycling.jpg" alt="">
+                            <div class="cycling-button button">
+                                <a href="#" data-toggle="modal" data-target="#modal-4">View More</a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h4>BENEFITS OF CYCLING</h4>
+
+                            <p>Riding a bike is healthy, fun and a low-impact form of exercise for all ages. Really!
+                                Besides being a lot of fun, ...</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+       
+<!--Safety Rules part-->
+<section class="safety">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h5>As a rule, it is best to ride in the direction of traffic, staying as far to the left as is
+                    practical.</h5>
+            </div>
+            <div class="col-sm-4 text-right">
+                <a class="btn-default" href="#" data-toggle="modal" data-target="#safety">Safety Tips</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Gallery-->
+
+<section id="projects" style="background-image: url('img/ancient-architectural-architectural-design-894443.jpg'); background-size: cover; background-repeat: no-repeat;"> 
+    <div class="section-heading" style="padding-top: 20px;">  
+        <h1 style="color: white;"><em>Gallery</em></h1>
+
+    </div>
+    <center>
+<div class="cd-full-width">
+    
+ <div class="container-fluid js-tm-page-content" data-page-no="3">
+   
+     
+     <div class="row tm-img-gallery">
+         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+             <a href="images/Cycle Rental-3.png">
+                 <img src="images/Cycle Rental-3.png" alt="Image" class="img-fluid tm-img">
+             </a>
+         </div>
+         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+             <a href="Images/WhatsApp Image 2021-05-14 at 7.07.14 PM (1).jpeg">
+                 <img src="Images/WhatsApp Image 2021-05-14 at 7.07.14 PM (1).jpeg" alt="Image" class="img-fluid tm-img">
+             </a>
+         </div>
+         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+             <a href="Images/WhatsApp Image 2021-05-14 at 7.07.13 PM.jpeg">
+                 <img src="Images/imgonline-com-ua-resize-L5WlXAZSJUMIs4uf.JPG" alt="Image" class="img-fluid tm-img" style="width:280px; height:215px;">
+             </a>
+         </div>
+         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+             <a href="Images/7.jpg">
+                 <img src="Images/imgonline-com-ua-resize-GreNo89ToMc.jpg" alt="Image" class="img-fluid tm-img" style="width:280px; height:215px;">
+             </a>
+         </div>
+         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+             <a href="Images/WhatsApp Image 2021-05-14 at 7.07.12 PM.jpeg">
+                 <img src="Images/WhatsApp Image 2021-05-14 at 7.07.12 PM.jpeg" alt="Image" class="img-fluid tm-img">
+             </a>
+         </div>
+         
+                                        
+     </div>
+
+ </div>
+                 
+</div>
+</center>
+</section>
+
+
+           <div class="slider">
+            <div class="Modern-Slider content-section" id="tour">
+                <!-- Item -->
+                <div class="item item-1">
+                    <div class="img-fill">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div>
+                          <h1>Health ON PEDALS</h1>
+                          
+                          <div class="white-button button">
+                              <a href="jaipur.html">EXPLORE WORLD ON CYCLE!</a>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="item item-2">
+                    <div class="img-fill">
+                        <div class="image"></div>
+                        <div class="info">
+                        <div>
+                          <h1>EXPLORE WORLD ON CYCLE!</h1>
+                          
+                          
+                          <div class="white-button button">
+                              <a href="jaipur.html">EXPLORE WORLD ON CYCLE!</a>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="item item-3">
+                    <div class="img-fill">
+                        <div class="image"></div>
+                        <div class="info">
+                        <div>
+                          <h1>EXPLORE WORLD ON CYCLE!/h1>
+                          
+                          
+                          <div class="white-button button">
+                              <a href="jaipur.html">EXPLORE WORLD ON CYCLE!</a>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+            </div>
+        </div>
+
+<br>
+<section  id="testimonial" class="content-section">
+<section class="testimonials py-5 text-white px-1 px-md-5 margin-top-xl">
+<div class="section-heading" style="padding-left: 4.2%; margin: 30px 0 30px 0;">  
+        <h1 style="color: white;"><em>TESTIMONIALS</em></h1>
+
+    </div>
+    
+    <div class="container" style="padding: 10px; background-color: #f4f4f4; height: auto;">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="pt-2 text-center font-weight-bold"></h2>
+  
+          <div class="carousel-controls testimonial-carousel-controls" style="width: 100%; height: auto;">
+            <div class="control d-flex align-items-center justify-content-center prev mt-3" style="background-color: #f4f4f4; margin-left:20px;"><i class="fa fa-chevron-left"></i></div>
+            <div class="control d-flex align-items-center justify-content-center next mt-3" style="margin-right: 20px;"><i class="fa fa-chevron-right"></i></div>
+  
+            <div class="testimonial-carousel">
+              <div class="h5 font-weight-normal one-slide mx-auto">
+                <div class="testimonial w-100 px-3 text-center d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
+                  <div class="message text-center blockquote w-100">
+                    <div class="card">
+                        
+                        <div class="container" style="height: auto;"> 
+                            <div class="ellipse">
+                                <i class="fa  fa-quote-left quote"></i>
+                            </div>
+                            <p>
+                                <strong>Simple, convenient & Economical </strong>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel erat in felis rhoncus vulputate. Nam magna ante, venenatis et condimentum a, congue id dolor. Phasellus pretium rhoncus massa, eget vulputate velit. Ut et ante malesuada, consectetur odio non, rhoncus velit. In ut massa a ex sodales dapibus sed ornare justo. Proin imperdiet neque non semper ultricies. Aenean rutrum mauris nec lorem interdum posuere. Aliquam odio nisl, lobortis vel purus ut, porta faucibus erat. Sed fringilla eget nunc nec efficitur. Nam elementum urna turpis, ac consequat lectus luctus eu. Integer non aliquet magna, ac interdum eros. Phasellus et neque porta, molestie tortor quis, rutrum ex. Cras hendrerit, ex pharetra consequat feugiat, sapien tortor pharetra neque, fringilla lobortis urna mauris sit amet diam. Ut ornare semper mauris vel interdum. In imperdiet turpis et molestie dapibus. Aliquam fringilla est lacus, id elementum tortor malesuada vitae. 
+
+                            </p>
+                            <div class="line_tool"></div>
+                            <h5>Namit Soni, New Delhi</h5>
+                            <div class="star">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star eighten"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                
+                </div>
+              </div>
+              <div class="h5 font-weight-normal one-slide mx-auto">
+                <div class="testimonial w-100 px-3 text-center  d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
+                  <div class="message text-center blockquote w-100">
+                      
+                    <div class="card">
+                        
+                        <div class="container">
+                            <div class="ellipse">
+                                <i class="fa  fa-quote-left quote"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel erat in felis rhoncus vulputate. Nam magna ante, venenatis et condimentum a, congue id dolor. Phasellus pretium rhoncus massa, eget vulputate velit. Ut et ante malesuada, consectetur odio non, rhoncus velit. In ut massa a ex sodales dapibus sed ornare justo. Proin imperdiet neque non semper ultricies. Aenean rutrum mauris nec lorem interdum posuere. Aliquam odio nisl, lobortis vel purus ut, porta faucibus erat. Sed fringilla eget nunc nec efficitur. Nam elementum urna turpis, ac consequat lectus luctus eu. Integer non aliquet magna, ac interdum eros. Phasellus et neque porta, molestie tortor quis, rutrum ex. Cras hendrerit, ex pharetra consequat feugiat, sapien tortor pharetra neque, fringilla lobortis urna mauris sit amet diam. Ut ornare semper mauris vel interdum. In imperdiet turpis et molestie dapibus. Aliquam fringilla est lacus, id elementum tortor malesuada vitae. </p>
+                            <div class="line_tool"></div>
+                            <h5>Anand Kumar</h5>
+                            <div class="star">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star eighten"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                      </div>
+                    
+                   </div>
+                 
+                </div>
+              </div>
+              <div class="h5 font-weight-normal one-slide mx-auto">
+                <div class="testimonial w-100 px-3 text-center  d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
+                  <div class="message text-center blockquote w-100">
+                    <div class="card">
+                       
+                        <div class="container" style="width: auto; text-align: center;">
+                            <div class="ellipse" >
+                                <i class="fa  fa-quote-left quote"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel erat in felis rhoncus vulputate. Nam magna ante, venenatis et condimentum a, congue id dolor. Phasellus pretium rhoncus massa, eget vulputate velit. Ut et ante malesuada, consectetur odio non, rhoncus velit. In ut massa a ex sodales dapibus sed ornare justo. Proin imperdiet neque non semper ultricies. Aenean rutrum mauris nec lorem interdum posuere. Aliquam odio nisl, lobortis vel purus ut, porta faucibus erat. Sed fringilla eget nunc nec efficitur. Nam elementum urna turpis, ac consequat lectus luctus eu. Integer non aliquet magna, ac interdum eros. Phasellus et neque porta, molestie tortor quis, rutrum ex. Cras hendrerit, ex pharetra consequat feugiat, sapien tortor pharetra neque, fringilla lobortis urna mauris sit amet diam. Ut ornare semper mauris vel interdum. In imperdiet turpis et molestie dapibus. Aliquam fringilla est lacus, id elementum tortor malesuada vitae.</p>
+                            <div class="line_tool"></div>
+                            <h5>Rahul Sakaria</h5>
+                            <div class="star">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star eighten"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                 
+                </div>
+              </div>
+
+              <div class="h5 font-weight-normal one-slide mx-auto">
+                <div class="testimonial w-100 px-3 text-center  d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
+                  <div class="message text-center blockquote w-100">
+                    <div class="card">
+                       
+                        <div class="container">
+                            <div class="ellipse">
+                                <i class="fa  fa-quote-left quote"></i>
+                            </div>
+                            <p>Loved the bikes and concept</p>
+                            <div class="line_tool"></div>
+                            <h5>Harshil Bhatnagar</h5>
+                            <div class="star">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star eighten"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                 
+                </div>
+              </div>
+              <div class="h5 font-weight-normal one-slide mx-auto">
+                <div class="testimonial w-100 px-3 text-center  d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
+                  <div class="message text-center blockquote w-100">
+                    <div class="card">
+                       
+                        <div class="container">
+                            <div class="ellipse">
+                                <i class="fa  fa-quote-left quote"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel erat in felis rhoncus vulputate. Nam magna ante, venenatis et condimentum a, congue id dolor. Phasellus pretium rhoncus massa, eget vulputate velit. Ut et ante malesuada, consectetur odio non, rhoncus velit. In ut massa a ex sodales dapibus sed ornare justo. Proin imperdiet neque non semper ultricies. Aenean rutrum mauris nec lorem interdum posuere. Aliquam odio nisl, lobortis vel purus ut, porta faucibus erat. Sed fringilla eget nunc nec efficitur. Nam elementum urna turpis, ac consequat lectus luctus eu. Integer non aliquet magna, ac interdum eros. Phasellus et neque porta, molestie tortor quis, rutrum ex. Cras hendrerit, ex pharetra consequat feugiat, sapien tortor pharetra neque, fringilla lobortis urna mauris sit amet diam. Ut ornare semper mauris vel interdum. In imperdiet turpis et molestie dapibus. Aliquam fringilla est lacus, id elementum tortor malesuada vitae.</p>
+                            <div class="line_tool"></div>
+                            <h5>Jaspal Singh</h5>
+                            <div class="star">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star eighten"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                 
+                </div>
+              </div>
+
+              <div class="h5 font-weight-normal one-slide mx-auto">
+                <div class="testimonial w-100 px-3 text-center  d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
+                  <div class="message text-center blockquote w-100">
+                    <div class="card">
+                       
+                        <div class="container">
+                            <div class="ellipse">
+                                <i class="fa  fa-quote-left quote"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel erat in felis rhoncus vulputate. Nam magna ante, venenatis et condimentum a, congue id dolor. Phasellus pretium rhoncus massa, eget vulputate velit. Ut et ante malesuada, consectetur odio non, rhoncus velit. In ut massa a ex sodales dapibus sed ornare justo. Proin imperdiet neque non semper ultricies. Aenean rutrum mauris nec lorem interdum posuere. Aliquam odio nisl, lobortis vel purus ut, porta faucibus erat. Sed fringilla eget nunc nec efficitur. Nam elementum urna turpis, ac consequat lectus luctus eu. Integer non aliquet magna, ac interdum eros. Phasellus et neque porta, molestie tortor quis, rutrum ex. Cras hendrerit, ex pharetra consequat feugiat, sapien tortor pharetra neque, fringilla lobortis urna mauris sit amet diam. Ut ornare semper mauris vel interdum. In imperdiet turpis et molestie dapibus. Aliquam fringilla est lacus, id elementum tortor malesuada vitae.</p>
+                            <div class="line_tool"></div>
+                            <h5>Raghavi G</h5>
+                            <div class="star">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star eighten"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                 
+                </div>
+              </div>
+              <div class="h5 font-weight-normal one-slide mx-auto">
+                <div class="testimonial w-100 px-3 text-center  d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
+                  <div class="message text-center blockquote w-100">
+                    <div class="card">
+                       
+                        <div class="container">
+                            <div class="ellipse">
+                                <i class="fa  fa-quote-left quote"></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel erat in felis rhoncus vulputate. Nam magna ante, venenatis et condimentum a, congue id dolor. Phasellus pretium rhoncus massa, eget vulputate velit. Ut et ante malesuada, consectetur odio non, rhoncus velit. In ut massa a ex sodales dapibus sed ornare justo. Proin imperdiet neque non semper ultricies. Aenean rutrum mauris nec lorem interdum posuere. Aliquam odio nisl, lobortis vel purus ut, porta faucibus erat. Sed fringilla eget nunc nec efficitur. Nam elementum urna turpis, ac consequat lectus luctus eu. Integer non aliquet magna, ac interdum eros. Phasellus et neque porta, molestie tortor quis, rutrum ex. Cras hendrerit, ex pharetra consequat feugiat, sapien tortor pharetra neque, fringilla lobortis urna mauris sit amet diam. Ut ornare semper mauris vel interdum. In imperdiet turpis et molestie dapibus. Aliquam fringilla est lacus, id elementum tortor malesuada vitae.
+</p>
+                            <div class="line_tool"></div>
+                            <h5>Kamlesh Y</h5>
+                            <div class="star">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star eighten"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                 
+                </div>
+              </div>
+              <div class="h5 font-weight-normal one-slide mx-auto">
+                <div class="testimonial w-100 px-3 text-center  d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
+                  <div class="message text-center blockquote w-100">
+                    <div class="card">
+                       
+                        <div class="container">
+                            <div class="ellipse">
+                                <i class="fa  fa-quote-left quote"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel erat in felis rhoncus vulputate. Nam magna ante, venenatis et condimentum a, congue id dolor. Phasellus pretium rhoncus massa, eget vulputate velit. Ut et ante malesuada, consectetur odio non, rhoncus velit. In ut massa a ex sodales dapibus sed ornare justo. Proin imperdiet neque non semper ultricies. Aenean rutrum mauris nec lorem interdum posuere. Aliquam odio nisl, lobortis vel purus ut, porta faucibus erat. Sed fringilla eget nunc nec efficitur. Nam elementum urna turpis, ac consequat lectus luctus eu. Integer non aliquet magna, ac interdum eros. Phasellus et neque porta, molestie tortor quis, rutrum ex. Cras hendrerit, ex pharetra consequat feugiat, sapien tortor pharetra neque, fringilla lobortis urna mauris sit amet diam. Ut ornare semper mauris vel interdum. In imperdiet turpis et molestie dapibus. Aliquam fringilla est lacus, id elementum tortor malesuada vitae. </p>
+                            <div class="line_tool"></div>
+                            <h5>Akshita Airan</h5>
+                            <div class="star">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star eighten"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                            
+                        </div>
+                      </div>
+                    
+                    </div>
+                 
+                </div>
+              </div>
+              <div class="h5 font-weight-normal one-slide mx-auto">
+                <div class="testimonial w-100 px-3 text-center  d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
+                  <div class="message text-center blockquote w-100">
+                    <div class="card">
+                       
+                        <div class="container">
+                            <div class="ellipse">
+                                <i class="fa  fa-quote-left quote"></i>
+                            </div>
+                            <p>
+                                <strong>Peaceful and Serene </strong>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel erat in felis rhoncus vulputate. Nam magna ante, venenatis et condimentum a, congue id dolor. Phasellus pretium rhoncus massa, eget vulputate velit. Ut et ante malesuada, consectetur odio non, rhoncus velit. In ut massa a ex sodales dapibus sed ornare justo. Proin imperdiet neque non semper ultricies. Aenean rutrum mauris nec lorem interdum posuere. Aliquam odio nisl, lobortis vel purus ut, porta faucibus erat. Sed fringilla eget nunc nec efficitur. Nam elementum urna turpis, ac consequat lectus luctus eu. Integer non aliquet magna, ac interdum eros. Phasellus et neque porta, molestie tortor quis, rutrum ex. Cras hendrerit, ex pharetra consequat feugiat, sapien tortor pharetra neque, fringilla lobortis urna mauris sit amet diam. Ut ornare semper mauris vel interdum. In imperdiet turpis et molestie dapibus. Aliquam fringilla est lacus, id elementum tortor malesuada vitae.
+                            </p>
+                            <div class="line_tool"></div>
+                            <h5>Suhani B</h5>
+                            <div class="star">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star eighten"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                 
+                </div>
+              </div>
+
+              <div class="h5 font-weight-normal one-slide mx-auto">
+                <div class="testimonial w-100 px-3 text-center  d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
+                  <div class="message text-center blockquote w-100">
+                    <div class="card">
+                       
+                        <div class="container">
+                            <div class="ellipse">
+                                <i class="fa  fa-quote-left quote"></i>
+                            </div>
+                            <p>
+                                <strong>superb way to keep you healthy </strong>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel erat in felis rhoncus vulputate. Nam magna ante, venenatis et condimentum a, congue id dolor. Phasellus pretium rhoncus massa, eget vulputate velit. Ut et ante malesuada, consectetur odio non, rhoncus velit. In ut massa a ex sodales dapibus sed ornare justo. Proin imperdiet neque non semper ultricies. Aenean rutrum mauris nec lorem interdum posuere. Aliquam odio nisl, lobortis vel purus ut, porta faucibus erat. Sed fringilla eget nunc nec efficitur. Nam elementum urna turpis, ac consequat lectus luctus eu. Integer non aliquet magna, ac interdum eros. Phasellus et neque porta, molestie tortor quis, rutrum ex. Cras hendrerit, ex pharetra consequat feugiat, sapien tortor pharetra neque, fringilla lobortis urna mauris sit amet diam. Ut ornare semper mauris vel interdum. In imperdiet turpis et molestie dapibus. Aliquam fringilla est lacus, id elementum tortor malesuada vitae.
+                            </p>
+                            <div class="line_tool"></div>
+                            <h5>Vivek G</h5>
+                            <div class="star">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star eighten"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                 
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+ <br><br><br><br>
+            <section id="blog" class="content-section">
+                <div class="section-heading">
+                    <h1>Blog<br><em>Entries</em></h1>
+                    <p></p>
+                </div>
+                <div class="section-content">
+                    <div class="tabs-content">
+                        <div class="wrapper">
+                            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                              <li><a href="#tab1" class="active">2021</a></li>
+                              <li><a href="#tab2">2020</a></li>
+                              <li><a href="#tab3"  >2019</a></li>
+                              <li><a href="#tab4">2018</a></li>
+                            </ul>
+                            <section id="first-tab-group" class="tabgroup">
+                                <div id="tab1">
+                                    <ul>
+                                        <li>
+                                            <div class="item">
+                                                <img src="Images/Cycle Rental-3.png" alt="" style="width:20%">
+                                                <div class="text-content">
+                                                    <h4>Stay tuned for Updates.</h4>
+                                                    <span> 2021 </span>
+                                                    <p></p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#projects">Checkout Our Gallery</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div id="tab2">
+                                    <ul>
+                                        <li>
+                                            <div class="item">
+                                                <img src="Images/IMG_0107.JPG"alt="" style="width:31%">
+                                                <div class="text-content">
+                                                    <h4>World Bicycle Day 2020: Indian citizen initiatives going the distance</h4>
+                                                    <span> June 3, 2020</span>
+                                                    <p>World Bicycle Day 2020 is being observed at a time when lockdowns are being eased, and lifted in other parts of the globe, lending the annual day renewed importance. Cycling is being viewed with fresh eyes as “green recovery” becomes a buzzword in the “new normal” of the post-COVID-19 world.</p>
+                                                    
+                                                   
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div id="tab3">
+                                    <ul>
+                                        <li>
+                                            <div class="item">
+                                                 <img src="Images/4.jpg" alt="" style="width:31%">
+                                                <div class="text-content">
+                                                    <h4>PEDAL AND TRING TRING</h4>
+                                                    <span>18 FEBRUARY 2019</span>
+                                                    <p>Ever since the first bicycle mayor program kicked off in India in 2016, cycling as a sport & leisure activity has picked up scale. With the announcement of two new mayors joining the brigade of existing four, India is perfectly poised in embedding the cycling culture in its state.</p>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <img src="Images/3.jpg" alt="" style="width:31%">
+                                                <div class="text-content">
+                                                    <h4>Bike Rent to enable healthy last-mile connectivity</h4>
+                                                    <span>19 March 2019</span>
+                                                    <p> A joint venture between Mahindra Lifespace Developers Limited (MLDL) and Rajasthan State Industrial Development and Investment Corporation (RIICO), has introduced bicycle sharing services within its Multi-Product Special Economic Zone.</p>
+                                                  
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <img src="Images/1-2.jpg" alt="" style="width:31%">
+                                                <div class="text-content">
+                                                    <h4>Eco-friendly bicycle sharing services</h4>
+                                                    <span>22 MARCH 2019</span>
+                                                    <p>Mahindra World City Jaipur Ltd. (MWC Jaipur), a joint venture between Mahindra Lifespace Developers Limited (MLDL) and Rajasthan State Industrial Development and Investment Corporation (RIICO), has introduced bicycle sharing services within its Multi-Product Special Economic Zone.</p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div id="tab4">
+                                    <ul>
+                                        <li>
+                                            <div class="item">
+                                                <img src="Images/dsc_2861.jpg" alt="" style="width:31%">
+                                                <div class="text-content">
+                                                    <h4>PEDAL DOWN ALL YOUR WORRIES WITH Bike Rent</h4>
+                                                    <span>12 June 2018</span>
+                                                    <p>Have you tried going back into time and re-cherish your life? Riding in the morning sunny skies or the hazy winter lights of Central Park, pushing pedals briskly at JLN Marg trying to beat your friends while feeling the cool breeze arouses nostalgic sentiments in the times of fast growing .</p>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </li>                                
+                                        <li>
+                                            <div class="item">
+                                                <img src="Images/jc18.PNG" alt="" style="width:31%">
+                                                <div class="text-content">
+                                                    <h4>Jaipur witnesses Juniors Cyclothon</h4>
+                                                    <span>18 June 2018</span>
+                                                    <p>Why should seniors have all the fun?" ask Jaipur kids as they participated in the Juniors Cylothon on Sunday morning. The cyclothon, which was an initiative by Pooja Vijay, who runs a cycle rental service in Jaipur, started from Sawai Mansingh Stadium at 6:30 in the morning.The main aim of the event was to promote cycling among children.</p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </li>
+                                       
+                                        
+                                    </ul>
+                                </div>
+                            </section> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="content-section">
+                
+                <div id="contact-content">
+                    <div class="section-heading">
+                        <h1>Contact<br><em>Bike Rent</em></h1>
+                        <p>If you have a question about how we work or about the services we provide,<br> as you may find just what you wanted to know right there. </p>
+                        
+                    </div>
+                    <div class="section-content">
+                        <form id="contact" action="contact-form-process.php" method="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-4">
+                                  <fieldset>
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                                  </fieldset>
+                                </div>
+                                 <div class="col-md-4">
+                                  <fieldset>
+                                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <button type="submit" id="form-submit" class="btn">Send Message Now</button>
+                                  </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="footer" style="color: white; height: auto;">
+                Copyright@2020 All Rights Reserved by <a href="index.html">The Bike Rent Private Ltd.</a> | <a href="#" data-toggle="modal" data-target="#terms">Terms & Condition</a> | <a href="#" data-toggle="modal" data-target="#service-7">FAQ</a> | <a href="#" data-toggle="modal" data-target="#disclaimer">Disclaimer</a></span>
+    
+            </section>
+        </div>
+<!-- Modal -->
+<div class="modal fade" id="modal-1" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Need of Cycling</h4>
+            </div>
+            <div class="modal-body">
+                <h6>Do You Know ??</h6>
+                <p>According to WHO, 60% of related factors to individual health and quality of life are
+                    correlated to lifestyle. We are living in 21st Century and the lifestyle we are having is
+                    too much busy that we even don't have time to think about our environment and our health.
+                </p>
+                <p>Exercise is a must part of our life and to cover this part we are here for you , at Pink
+                    Pedals we will provide you cycles on rent during your free time at main city parks and
+                    garden, so that you can have fun as well as exercise in few minutes ride. We have a wide
+                    range of cycles for everyone and for all age group.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modal-2" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Why hire a cycle ?</h4>
+            </div>
+            <div class="modal-body">
+                <h6>Some merits of hiring a bicycle than buying are:-</h6>
+                <ul class="list">
+                    <li>Forget about all worries and stress related to transporting your cycle.</li>
+                    <li>Forget the pain of packing your cycle there and back. Hiring a cycle from us will give
+                        you more time to cycle and chill out.</li>
+                    <li>Forget the stress of theft when you hire a cycle with us.</li>
+                </ul>
+                <p>
+                    At Bike Rent we want people to experience the joy of cycling and a contribution to make
+                    our environment clean and city traffic better.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-3" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Facts about Cycling</h4>
+            </div>
+            <div class="modal-body">
+                <p>Cycling is taken as a easiest sports unlike some other sports, cycling does not require high
+                    levels of physical skill. Most people know how to ride a cycle and, once you learn, you
+                    don’t forget.</p>
+                <h6>Some Interesting Facts about Cycling:-</h6>
+                <ul class="list">
+                    <li>The average adult who exercises for one hour by cycling at a moderate pace burns 563
+                        calories, more than double what the average person burns by walking briskly for one
+                        hour.</li>
+                    <li>Cycling three hours or 30 kilometers per week halves your risk of heart disease and
+                        strokes.</li>
+                    <li>Women who cycle 30 minutes a day have a lower risk of breast cancer.</li>
+                    <li>Countries with the highest levels of cycling and walking generally have the lowest
+                        obesity rates.</li>
+                    <li>A study of nearly 2,400 adults found that those who cycled to work were fitter, leaner,
+                        less likely to be obese, and had better triglyceride levels, blood pressure, and insulin
+                        levels than those who didn’t active commute to work.</li>
+                    <li>An adult cyclist generally have life expectancy two years above the average and a
+                        fitness level of someone 10 years younger.</li>
+                    <li>A recent psychological study proves that person who cycle regularly have a unique mix of
+                        intelligence and cool factor in them.</li>
+                    <li>Riding a cycle is healthy, fun and a low-impact form of exercise for all ages.</li>
+                    <li>Cycling can improve both physical and mental health, and can reduce the chances of
+                        experiencing many health problems.</li>
+                    <li>Bicycles use 2% as much energy as cars per passenger-kilometer, and cost less than 3% as
+                        much to purchase.</li>
+                    <li>Twenty bicycles can be parked in the same space as one car. It takes around ve percent
+                        of the materials and energy used to make a car to build a bike, and a bike produces zero
+                        pollution.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-4" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Benefits of Cycling:- </h4>
+            </div>
+            <div class="modal-body">
+                <p>Riding a bike is healthy, fun and a low-impact form of exercise for all ages. Really! Besides
+                    being a lot of fun, it can help keep a host of health problems aside. Are you Curious to
+                    know how, here are the facts!</p>
+                <h6>#1 It Keep Diabetes In Check</h6>
+                <p>Diabetes is the root cause of heart attacks, strokes, skin diseases, kidney failures and many
+                    other illnesses. To keep this devil in check, cycle every day! Cycling curbs diabetes as it
+                    uses up the glucose and converts it into useful energy. In Finland, a large scale research
+                    found that risk of developing diabetes can be reduced to 40 per cent if a person cycles for
+                    more than 30 minutes per day</p>
+                <h6>#2 It Makes Your Heart Fitter</h6>
+                <p>
+                    Cycling increases the heart rate, and gives you a good cardio workout. Compared to people
+                    living the sedentary life, people who cycle regularly tend to have an enhanced
+                    cardiovascular system.Regular cycling stimulates and improves your heart, lungs and
+                    circulation, reducing your risk of cardiovascular diseases. Cycling strengthens your heart
+                    muscles, lowers resting pulse and reduces blood fat levels.
+                </p>
+                <h6>#3 It Reduces Risk of Cancer</h6>
+                <p>Risk of disease like cancer can be significantly reduced by involving in physical activities
+                    such as cycling. This has also been proved by the studies that people who involve in
+                    moderate to high level of physical activities in their early and middle ages are less prone
+                    to diseases like cancer. On the other hand, the risk of cancer did not decrease in sedentary
+                    people. Many researchers have studied the relationship between exercise and cancer,
+                    especially colon and breast cancer. Research has shown that if you cycle, the chance of
+                    bowel cancer is reduced. Some evidence suggests that regular cycling reduces the risk of
+                    breast cancer.</p>
+                <h6>#4 It Keeps Away The Arthritis</h6>
+                <p>Not only does cycling reduce arthritis pain, it also helps in preventing the disease. Whether
+                    you cycle indoors, or outdoors, your joints and muscles will get a great workout and keep
+                    you fitter for longer! Either you involve in static indoor cycling or outdoor cycling, both
+                    equally benefits in preventing and reducing the arthritis.Flexing of muscles takes place in
+                    the thighs and lower legs during cycling which is helpful in controlling arthritis. Cycling
+                    improves strength, balance and coordination. It may also help to prevent falls and
+                    fractures. If you are a patient of osteoarthritis, cycling is the best form of exercise as
+                    it places little stress on joints. </p>
+                <h6>#5 It Strengthens Your Muscles</h6>
+                <p>
+                    Cycling engages the calf and thigh muscles and helps strengthen and tone them. It also works
+                    on the core muscles, toning your abs, and toughening up your arms.A good muscle workout –
+                    cycling uses all of the major muscle groups as you pedal. cycling increases stamina,
+                    strength and aerobic fitness.
+                </p>
+                <h6>#6 It Increases Stamina</h6>
+                <p>Regular cycling increases endurance levels and gives your stamina a good boost. Start with 30
+                    minutes of cycling each day and gradually increase the time and pace. This will result in
+                    higher energy levels, in no time! Cycling boost the endurance capacity which increases
+                    body’s stamina , resulting in high energy levels both at work and at normal day to day
+                    activities.</p>
+                <h6>#7 Healthy and safe Pregnancy</h6>
+                <p>
+                    Expecting women who daily exercise during their pregnancy have an easier, less complicated
+                    labour and recover faster & enjoy better overall mood throughout the pregnancy period.
+                    Undoubtedly low impact exercise such as cycling during pregnancy helps the mother and
+                    protect the foetus,”
+                </p>
+                <h6>#8 It Helps You De-stress</h6>
+                <p>
+                    Since cycling is so much fun, it keeps your stress levels under control. Cycle every day for
+                    30 minutes to an hour, and it will help you keep all that stress and negative energy at bay.
+                    Riding cycle regularly reduces stress and depression
+                </p>
+                <h6>#9 It Manages Pain</h6>
+                <p>
+                    Research has shown that cycling can reduce pain as it a ‘releasing’ exercise – one that
+                    helps ease physiological and psychological problems like stress, tension, and pain. Thus,
+                    cycling is a great way to reduce pain if done regularly. Cycling is considered as a
+                    “releasing” exercise. Releasing exercises play a very important role in alleviating
+                    physiological and psychological issues like stress, tension, and pain. Strategy of pain
+                    reduction which is generally used on children is Cycling and similarly is useful amongst
+                    adults as well.
+                </p>
+                <h6>#10 It helps In Weight Loss</h6>
+                <p>
+                    Synonym of calorie burner is Cycling! Just cycling for one hour thrice a week, helps in
+                    dropping the extra kilos in no time! No doubts,one of the popular gym exercise now is
+                    spinning! As Cycling raises the metabolic rate, builds muscle and burns extra body fat. It
+                    is considered as a best way to control or reduce weight if practiced with healthy eating
+                    habits.
+                </p>
+                <h6>#11 Spin the wheels and live long and look young always </h6>
+                <p>
+                    Cycling helps in required collagen production in the body which gradually enhances the
+                    healing process and reduces wrinkles.
+                </p>
+                <h6>#12 No more sufferings from Indigestion</h6>
+                <p>Cycling benets our body deep into its core. “Physical activity helps decrease the time it
+                    takes food to move through the large intestine, limiting the amount of water absorbed back
+                    into your body and leaving you with softer stools, which are easier to pass,”</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        <div class="modal fade" id="safety" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Safety Tips</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h6>Do’s</h6>
+                                <ul class="list">
+                                    <li><strong>Ride on:-</strong> As a rule, it is best to ride in the direction of traffic, staying as far to the left as is practical. However, always make sure there is room to handle emergencies and that you do not ride so close to the left that you run the risk of hitting the road sides.</li>
+                                    <li><strong>Safety Gears:-</strong> Regardless of the type of cycling you are doing, always wear a helmet and other safety gears. Make sure your Helmet is properly fastened and fitted and not move when you shake your head.</li>
+                                    <li><strong>Brakes:-</strong> Make sure your brakes are always in top-notch condition. Be aware of how weather and road conditions can affect your ability to brake. Under normal circumstance, apply the rear brake before the front brake. Use the rear brake for smooth gradual slowing down. Use the front brake for more abrupt and efficient braking. Only brake when the front wheel is straight.</li>
+                                    <li><strong>Clothings:-</strong> Wear bright or light-coloured clothing during the day and reflective or fluorescent clothing at night or in poor visibility conditions.</li>
+                                    <li><strong>Locking:-</strong> Always lock your cycle to prevent it from being taken away.</li>
+                                    <li>Remember 1 Seat = Only 1 rider.</li>
+                                    <li>Always use hand signals when stopping or turning</li>
+                                    <li>When you are part of a cycling group, ride single-file, not side-by-side.</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-12">
+                                <h6>Don’t</h6>
+                                <ul class="list">
+                                    <li>Do not ride on the road towards oncoming traffic.</li>
+                                    <li>Do not ride on "Expressway" or within "Tunnel Area”.</li>
+                                    <li>Do not hold onto other vehicles while pedalling.</li>
+                                    <li>Do not use mobile phone and earphone for music listening.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="modal-init1" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">AdBicycle</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>About Us:-</h4>
+                                <ul class="list">
+                                    <li><strong>Founder:-</strong> Pooja Vijay, a young entrepreneur and visionary women, who dreamed of a safer and people friendly environment, in 2017 founded Bike Rent Private Limited with merely 9 bicycles and her hard work and passion for cycling made Bike Rent a business group known for its workman ship and ethics. She was chosen as first bicycle mayor in Feb-2019 for her work in the field of promoting bicycles all around. She has been awarded by 100’s societies and group for the good work she has done for the society.</li>
+
+                                    <li><strong>Vision:-</strong> The vision behind AdBicycle is to create an eco-friendly  way of doing business promotions and marketing. AdBicycle marketing plans are designed to keep marketing affordable to every business, be it a start-up or a giant business organisation.
+                                    </li></ul>
+
+                            <h4>Concept:-</h4>
+                                <ul class="list">
+                                    <li>Bike Rent always believe that Cycles have a power to bring change in the society. The concept of AdBicycle is also based on the same concept; we have designed something very creative, innovative and eye catching, and our belief in becoming <strong>“Vocal for our Locals”</strong>. AdBicycle tag line explains its concept very well, <strong>“Go Eco-Friendly, Grow Eco-Friendly”</strong>.
+                                </li></ul>
+                                
+                            <h4>Benefits:-</h4>
+                                <ul class="list">
+                                    <li><strong>Cost Effective:-</strong> These Ad bicycles can put uncountable impressions of your business in your specified area, and that too on a very pocket friendly cost, or you can say just a part of market cost.</li>
+
+                                    <li><strong>Visibility till Doorstep:-</strong> Ad bicycles, due to their special size and our patent design, can go in every nook and corner creating last step visibility.
+                                    </li>
+                                    <li><strong>Eye Catching:-</strong> Ad bicycle are noticeable and stands out of the crowd due to their effective presence and our Patent design. They are so catchy that it’s difficult to forget them.
+                                    </li>
+                                    <li><strong>Environment Friendly:-</strong> Most positive point of Ad Bicycles is that they run on fat and not on fuel, creating Healthy and Green environment.
+                                    </li>
+                                    <li><strong>Appreciated by Eco-Conscious Groups:-</strong> These Eco-Friendly Ad bicycles have potential to roll out anywhere as these are very much appreciated by Nature and Environment loving people.
+                                    </li>
+                                    <li><strong>GPS Friendly:-</strong> All the riders of AdBicycle are well equipped with devices which allow you to track their location and ask them to move in a direction of your choice.
+                                    </li>
+                                    <li><strong>Trained Riders:-</strong>Our Trained riders understand the purpose of AdBicycle and work accordingly to get maximum customer impressions which directly allow your business to grow multi folded in a very short span of time.
+                                </li></ul>
+                            
+                            <h4>How It Works:-</h4>
+                                <ul class="list">
+                                    <li>Keeping our business ethics in mind, this time also Bike Rent tried to keep things as easy as possible, you have to just select your Ad Bicycle Size and plan, rest leave everything on us; We will keep your business rolling and reaching heights of success. A well trained team will also guide you about what type of plan you should choose to get maximum standing and publicity. You can also have our riders dressed in your custom branded clothing at very nominal charges. You can use AdBicycle for brand promotion, product launching, events promotions, social cause, and many more.
+                                </li></ul>
+                            <h4>Customers:-</h4>
+                                <ul class="list">
+                                    <li> Our Major Clientele involves Department of Transport Rajasthan Government, Nagar Nigam Greater
+                                </li></ul>
+                            <h4>Contact Us:-</h4>
+                                <ul class="list">
+                                    <li><strong>Phone:-</strong> 7229942221</li>
+                                    <li><strong>Email Id:-</strong> adbicycles@gmail.com
+                                </li></ul>
+                             
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="modal fade" id="#modal-init2" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Public Bicycle Sharing At Mahindra World City, </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                
+                                <h4>Public Bicycle Sharing At Mahindra World City,  (India’s Biggest Integrated Society)</h4>
+                                <ul class="list">
+                                    <li> Beginning of a sustainable future starts with one pedal push. We at Bike Rent were delighted enough to launch “Public Bicycle Sharing” in Mahindra World city, a future-focused, sustainable industrial ecosystems, thoughtfully designed to create a balance between Livelihood, Living and Life. Mahindra World City is India’s biggest integrated City spreading over 3000 Acres. </li>
+
+                                    <li>Launched on 19-Mar-2019, Bike Rent is covering its Multi-Product Economic Zone (SEZ) spread across 1500 acres with future plan of covering Domestic Tariff Area (DTA) spread across 1000 acres, in combination with planned co-located social infrastructure. The Vision of this project is to include the entire area in MWC with this sustainable mode of transport.
+                                    </li>
+                                    <li>
+                                    Cycle sharing is expected to boost the use of public transport by providing crucial last-mile
+Connectivity, thereby expanding the catchment areas for the region’s rapid transit systems. It is offering the convenience of cycling without the burden of ownership and the flexibility to accommodate one-way trips. By encouraging a shift to sustainable modes, the cycle sharing system will reduce dependency on automobiles, particularly for short trips in the MWC, reduces traffic congestion, vehicle emissions, and demand for motor vehicle parking. Besides, the system will expand the health and wellness benefits of bicycle transport to new users.
+                                    </li>
+                                
+                               
+                                <li>Link : <a href="https://www.mahindraworldcity.com/events_at_mwc/mahindra-world-city-jaipur-launches-eco-friendly-bicycle-sharing-services/">https://www.mahindraworldcity.com/events_at_mwc/mahindra-world-city-jaipur-launches-eco-friendly-bicycle-sharing-services/</a><li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="terms" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Terms & Condition</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="list">
+                                    <li>Mandatory Security deposit for every booking:- Any original Photo Address Proof or 1000 Rs.  Will be returned once the cycles are handed over.
+                                    </li>
+                                    <li>Photo Address Proof  means Original proof of address and identity. (No photocopies will be accepted)</li>
+                                    <li>Min fix rental should be paid in advance.</li>
+                                    <li>
+                                        <h6>RESPONSIBILITY FOR DAMAGE OR LOSS:-</h6>
+                                        We expect that Customer agrees to the fact that he/she will return the cycle and other equipments rented in the same good condition as when received, and to repair and replace, lost or stolen, damaged or broken cycles or parts to reimburse Bike Rent for said equipment. Hence regardless of the party at fault, customer agrees and understands his responsibility  for the theft or damage to said cycle and other equipments given on rent.
+                                    </li>
+                                    <li>
+                                        <h6>No SUB-LEASING ALLOWED:-</h6>
+                                        Customer understands and agrees that any subleasing of rental equipments from us is prohibited and if customer found subleasing then it will immediately cause termination and cancellation of this contract and other legal action will be held.
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+<div class="modal fade" id="service-7" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">FAQ</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                            <div class="col-sm-12">
+                                <h6>1. How can I rent a cycle?</h6>
+                                <p>Walk down at Jawahar Circle and choose amongst the fleet of cycles we offer by either depositing your Original Photo Address Proof or Rs 1000 which will be refunded once the cycle is returned to us after making the full payment.</p>
+                                <h6>2. How should I pay money?  </h6>
+                                <p>You can make payment through cash or money transfer thru e-wallets like Paytm, cash..</p>
+                                <h6>3. What if owner demands some ID proof?</h6>
+                                <p>Yes, as a SECURITY we certainly require your ORIGINAL Photo Address Proof like AADHAR, Voter ID.</p>
+                                <h6>4. What are valid ID proofs?</h6>
+                                <p>Any certified legal document which clearly mentions your complete name, permanent address and father’s name and in the eyes of law is true and original will serve as legal ID Proofs, For example, AADHAR, Voter ID etc
+</p>
+                                <h6>5. What is the minimum time period of hire?</h6>
+                                <p>There is no minimum time period while you rent a cycle with Bike Rent</p>
+                                <h6>6. Is there a contract? What are the terms?</h6>
+                                <p>Yes, as you agree to rent a cycle and Bike Rent agrees to it then there is a mutual contract where,
+</p>
+                                <ul class="list">
+                                    <li>a.   Bike Rent is bind to give a cycle available on rent as per the choice made by the client on providing necessary documents or security amount.</li>
+                                    <li>b.   Client of Bike Rent is bind to pay the security amount or documents (as required) and complete rental charge
+</li>
+                                    <li>c.   Cycle should be returned in the same condition as it was when handling it.</li>
+                                    <li>d.   Bike Rent do not owe any responsibility against any harm occurred during the rental period. It will be solely responsibility of the client.
+</li>
+                                </ul>
+                                <h6>7. When do I get my refundable deposit back?    </h6>
+                                <p>When the client returns the rented cycle, security amount or any documents submitted will be refunded.
+</p>
+                                <h6>8. Who handles the delivery?</h6>
+                                <p>We have trained and educated staff which co-ordinates in the delivery of cycles amongst the clients of Bike Rent.</p>
+                                <h6>9. How safety is insured? </h6>
+                                <p>Bike Rent aim at proper security of its client while they feel the magic of Mother Nature and aroma of good health. For this we provide Helmets free of cost with all our cycles.</p>
+                            </div>
+                        </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+         <!-- Modal -->
+      
+
+        <div class="modal fade" id="modal-init2" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Public Bicycle Sharing At Mahindra World City</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Public Bicycle Sharing At Mahindra World City, Jaipur (India’s Biggest Integrated
+                                    Society)</h4>
+                                    <ul class="list">
+                                        <li> Beginning of a sustainable future starts with one pedal push. We at Bike Rent
+                                            Jaipur were delighted enough to launch “Public Bicycle Sharing” in Mahindra World
+                                            city, a future-focused, sustainable industrial ecosystems, thoughtfully designed to
+                                            create a balance between Livelihood, Living and Life. Mahindra World City is India’s
+                                            biggest integrated City spreading over 3000 Acres. </li>
+        
+                                        <li>Launched on 19-Mar-2019, Bike Rent is covering its Multi-Product Economic Zone
+                                            (SEZ) spread across 1500 acres with future plan of covering Domestic Tariff Area
+                                            (DTA) spread across 1000 acres, in combination with planned co-located social
+                                            infrastructure. The Vision of this project is to include the entire area in MWC with
+                                            this sustainable mode of transport.
+                                        </li>
+                                        <li>
+                                            Cycle sharing is expected to boost the use of public transport by providing crucial
+                                            last-mile
+                                            Connectivity, thereby expanding the catchment areas for the region’s rapid transit
+                                            systems. It is offering the convenience of cycling without the burden of ownership
+                                            and the flexibility to accommodate one-way trips. By encouraging a shift to
+                                            sustainable modes, the cycle sharing system will reduce dependency on automobiles,
+                                            particularly for short trips in the MWC, reduces traffic congestion, vehicle
+                                            emissions, and demand for motor vehicle parking. Besides, the system will expand the
+                                            health and wellness benefits of bicycle transport to new users.
+                                        </li>
+        
+        
+                                        <li>Link : <a
+                                                href="https://www.mahindraworldcity.com/events_at_mwc/mahindra-world-city-jaipur-launches-eco-friendly-bicycle-sharing-services/">https://www.mahindraworldcity.com/events_at_mwc/mahindra-world-city-jaipur-launches-eco-friendly-bicycle-sharing-services/</a>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="disclaimer" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Disclaimer & Intellectual Property Statement.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Copyright & Trademarks</h4>
+                      <p>All rights reserved. All content (texts, trademarks, illustrations, photos, graphics, files, designs, arrangements, Text etc.) on this website of the Bike Rent are protected by copyright and other protective laws. The contents of this website are to be used only in accordance with Internet regulations. Bike Rent is the owner or the licensee of its Intellectual property "Bike Rent" and "Juniors Cyclothon" individually. All rights are reserved with Bike Rent against usage of the word "Juniors Cyclothon" or logo or similar name in organising any type of cycling events for kids or children. Without the explicit written permission, no one is allowed to us these name or similar names, logos, trademarks, photos, graphics.</p>
+                      <p>The unlicensed and unauthorised use of any of the Bike Rent/Juniors Cyclothon name, Its Marks (or any other marks or logos that are confusingly similar to, or likely to be mistaken for, them) is strictly prohibited. </p>
+                      <h4>Internet regulations.</h4>
+                      <p>Without the explicit written permission of the Bike Rent it is prohibited to integrate in whole, or in part, any of the protected contents published on these websites into other programs or other web sites or to use them by any other means. This website can contain elements that are protected by copyright and by other laws that are subject to the copyright or other rights of third parties and that are correspondingly protected for these third parties.
+</p>
+                      <h4>Liability</h4>
+                      <p>The Bike Rent has carefully compiled the contents of this website in accordance with their current state of knowledge. Access to and use of this website, as well as web sites related or connected to this by links, are at the user's own risk and responsibility. Damage and warranty claims arising from missing or incorrect data are excluded. The Bike Rent bears no responsibility or liability for damage of any kind, also for indirect or consequential damages resulting from access to or use of this website or websites related or connected to this by links.</p>
+                      <h4>Links to other websites</h4>
+                      <p>The Bike Rent website can contain links (cross references) to websites that are run by third parties. The Bike Rent takes no responsibility for the content of these other websites.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Modal -->
+<div class="modal fade" id="service-1" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">CYCLE RENTALS</h4>
+            </div>
+            <div class="modal-body">
+                <p>Bike Rent provides best in class fully maintained hi-end international brand Geared and Non-Geared cycles at a very reasonable price for any duration, an hour or a day, a week or a month. Keeping the easiness and safety of rider in concern, we provide all necessary accessories and gears complimentary with Cycles. It’s easy and safe always hiring a bicycle from Bike Rent. We do have a big fleet of cycles for all occasions and need. We have attractive cycles like Tandem cycles (2-Seater) or Fat tyre bicycles. Our fleet is our USP which covers everyone, be it men, women or kids. Our tariff slides per hire duration or quantity. The more you ride, the less you pay.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="service-2" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">PUBLIC BICYCLE SHARING</h4>
+            </div>
+            <div class="modal-body">
+                <p>Bike Rent have a hand on experience in Public Bicycle sharing or end point connectivity cycle services. Currently Bike Rent PBS is operational at Mahindra World City, India’s biggest integrated society with a big fleet of cycles on land. We support “Cycle to Work” and “Cycle with Work”. (Get more knowledge about current operational PBS, go to <a href="https://www.mahindraworldcity.com/events_at_mwc/mahindra-world-city-jaipur-launches-eco-friendly-bicycle-sharing-services/ " style="color:#ff75a0">https://www.mahindraworldcity.com/events_at_mwc/mahindra-world-city-jaipur-launches-eco-friendly-bicycle-sharing-services/</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="service-3" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">CORPORATE MOBILITY SOLUTIONS</h4>
+            </div>
+            <div class="modal-body">
+                <p>Bike Rent, from the very first day is working towards providing Sustainable mobility solutions to corporates whether it’s about employee commutation, or employee well-being or some event. Customisation in the services and process is done per client’s need or requirement. (Ref. for the same can be provided on request)</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="service-4" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">CORPORATE CYCLING EVENTS</h4>
+            </div>
+            <div class="modal-body">
+                <p>Bike Rent, one of the major area of working is Cycling events or large scale group rides. We have marked more than 200 corporate and government cycling events and still adding. We are masters in organising such events, provides all arrangement from Cycles to T-Shirts, Medals to Certificate, Snacks to Music, Gifts to branding, route map to maintenance. You have to just come, ride and enjoy, Rest Bike Rent will take care.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="service-5" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">CYCLOTHONS</h4>
+            </div>
+            <div class="modal-body">
+                <p>Large scale cyclothons are being organised in every short span of time to keep up the spirit of people on. Like Juniors Cyclothon, Saksham Cycle rally, Independence day ride, Night ride are to name a few. We are specialised in organising Cyclothons and provides all arrangement from Cycles to T-Shirts, Medals to Certificate, Snacks to Music, route map to maintenance. You have to just come, ride and enjoy, Rest Bike Rent will take care.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="service-6" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">CUSTOMISED CITY CYCLE TOURS</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you looking for something specially designed for you as per your holiday plans, We caters customised city cycling tours for Solo riders, corporate guests and tourist, to have sneak peak of every nook and corner of Pinkcity. The tour may be self-guided or guided; we provide complete guidance and support to make your travel worthy.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Hide Header on on scroll down
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('header').outerHeight();
+
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+            
+            // Make sure they scroll more than delta
+            if(Math.abs(lastScrollTop - st) <= delta)
+                return;
+            
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > lastScrollTop && st > navbarHeight){
+                // Scroll Down
+                $('header').removeClass('nav-down').addClass('nav-up');
+            } else {
+                // Scroll Up
+                if(st + $(window).height() < $(document).height()) {
+                    $('header').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+            
+            lastScrollTop = st;
+        }
+    </script>
+<script type="text/javascript">
+    var nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 100) {
+        nav.classList.add('bg-dark', 'shadow');
+      } else {
+        nav.classList.remove('bg-dark', 'shadow');
+      }
+    });
+  </script>
+  <script>
+ function init() {
+    const sliders = document.getElementsByClassName("tick-slider-input");
+
+    for (let slider of sliders) {
+        slider.oninput = onSliderInput;
+
+        updateValue(slider);
+        updateValuePosition(slider);
+        updateLabels(slider);
+        updateProgress(slider);
+
+        setTicks(slider);
+    }
+}
+
+function onSliderInput(event) {
+    updateValue(event.target);
+    updateValuePosition(event.target);
+    updateLabels(event.target);
+    updateProgress(event.target);
+}
+
+function updateValue(slider) {
+    let value = document.getElementById(slider.dataset.valueId);
+
+    value.innerHTML = "<div>" + slider.value + "</div>";
+}
+
+function updateValuePosition(slider) {
+    let value = document.getElementById(slider.dataset.valueId);
+
+    const percent = getSliderPercent(slider);
+
+    const sliderWidth = slider.getBoundingClientRect().width;
+    const valueWidth = value.getBoundingClientRect().width;
+    const handleSize = slider.dataset.handleSize;
+
+    let left = percent * (sliderWidth - handleSize) + handleSize / 2 - valueWidth / 2;
+
+    left = Math.min(left, sliderWidth - valueWidth);
+    left = slider.value === slider.min ? 0 : left;
+
+    value.style.left = left + "px";
+}
+
+function updateLabels(slider) {
+    const value = document.getElementById(slider.dataset.valueId);
+    const minLabel = document.getElementById(slider.dataset.minLabelId);
+    const maxLabel = document.getElementById(slider.dataset.maxLabelId);
+
+    const valueRect = value.getBoundingClientRect();
+    const minLabelRect = minLabel.getBoundingClientRect();
+    const maxLabelRect = maxLabel.getBoundingClientRect();
+
+    const minLabelDelta = valueRect.left - (minLabelRect.left);
+    const maxLabelDelta = maxLabelRect.left - valueRect.left;
+
+    const deltaThreshold = 32;
+
+    if (minLabelDelta < deltaThreshold) minLabel.classList.add("hidden");
+    else minLabel.classList.remove("hidden");
+
+    if (maxLabelDelta < deltaThreshold) maxLabel.classList.add("hidden");
+    else maxLabel.classList.remove("hidden");
+}
+
+function updateProgress(slider) {
+    let progress = document.getElementById(slider.dataset.progressId);
+    const percent = getSliderPercent(slider);
+
+    progress.style.width = percent * 100 + "%";
+}
+
+function getSliderPercent(slider) {
+    const range = slider.max - slider.min;
+    const absValue = slider.value - slider.min;
+
+    return absValue / range;
+}
+
+function setTicks(slider) {
+    let container = document.getElementById(slider.dataset.tickId);
+    const spacing = parseFloat(slider.dataset.tickStep);
+    const sliderRange = slider.max - slider.min;
+    const tickCount = sliderRange / spacing + 1; // +1 to account for 0
+
+    for (let ii = 0; ii < tickCount; ii++) {
+        let tick = document.createElement("span");
+
+        tick.className = "tick-slider-tick";
+
+        container.appendChild(tick);
+    }
+}
+
+function onResize() {
+    const sliders = document.getElementsByClassName("tick-slider-input");
+
+    for (let slider of sliders) {
+        updateValuePosition(slider);
+    }
+}
+
+window.onload = init;
+window.addEventListener("resize", onResize);
+  </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+</body>
+</html>
